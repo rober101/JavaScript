@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Remover</title>
+	<style >
+		#baner{
+			background-color: #F00;
+			width: 450px;
+			height: 300px;
+			position: absolute;
+			left: 400px;
+			top: 50px;
+			font-size: 35px;
+			text-align: center;
+		}
+		img{
+				float: left;
+				margin: 15px;
+				width: 350px;
+				height: 200px;
+			}
+		#im1,#im2,#im3,#im4{
+			float: left;
+			margin: 15px;
+			width: 350px;
+			height: 200px;
+			font-size: 35px;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+		
+		/*	var z =document.getElementById("cerrar");
+			z.addEventListener("click",cerrar_banner,false);*/
+		document.getElementById("cerrar").addEventListener("click",cerrar_banner,false);
+		//document.getElementById("im1").addEventListener("click",carrito,false);+
+		var imagenes=document.querySelectorAll("#carrete img");
+		for (var i = imagenes.length - 1; i >= 0; i--) {
+			imagenes[i].addEventListener("click",carrito,false);
+		}
+
+		});
+		function cerrar_banner(){
+			$("#baner").remove();
+		}
+		function carrito(num){
+			if(num.target==im1){
+				$("#im1").replaceWith("<div id='im1'>Agregar al carrito</div>'");
+			}
+			if(num.target==im2){
+				$("#im2").replaceWith("<div id='im2'>Agregar al carrito</div>'");
+			}
+			if(num.target==im3){
+				$("#im3").replaceWith("<div id='im3'>Agregar al carrito</div>'");
+			}
+			if(num.target==im4){
+				$("#im4").replaceWith("<div id='im4'>Agregar al carrito</div>'");
+			}
+			
+		}
+	</script>
+</head>
+<body>
+	<div id="baner">
+		Banner de prueba
+		<p id="cerrar">cerrar</p>
+	</div>
+	<div id="carrete">
+		<img src="imagens/Re.JPG" width="300" height="300" id="im1">
+		<img src="imagens/Re.JPG" width="300" height="300" id="im2">
+		<img src="imagens/Re.JPG" width="300" height="300" id="im3">
+		<img src="imagens/Re.JPG" width="300" height="300" id="im4">
+	</div>
+</body>
+</html>

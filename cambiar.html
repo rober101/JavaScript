@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cambiar</title>
+	<style type="text/css">
+		.linkcursos{
+			/*background-color: #F00;*/
+			color: #F00;
+			font-weight: bold;
+			margin-left: 25px;
+
+		}
+		a{
+			display: block;
+			margin-top: 20px;
+			font-size: 24px;
+		}
+		table{
+			text-align: center;
+			border: none;
+		}
+		td{
+			border: none;
+		}
+		#contenidoEnlaze{
+			position: absolute;
+			left: 31px;
+			top: 65px;
+			width: 400px;
+			height: 64px;
+			z-index: 1;
+			padding-top: 100px;
+		}
+
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			// body...
+		//	$("a[href^='http://'").addClass("linkcursos");	
+			document.getElementById("cursos").addEventListener("click",resaltaCurso,false);
+			document.getElementById("informacion").addEventListener("click",resaltaEjmplo,false);
+
+		});
+		function resaltaCurso()
+			{
+			/*	$(".ejemplo").removeClass("linkcursos");
+				$(".cursos").addClass("linkcursos");*/
+				$(".cursos").toggleClass("linkcursos");
+			}
+		function resaltaEjmplo()
+			{
+				/*$(".cursos").removeClass("linkcursos");
+				$(".ejemplo").addClass("linkcursos");*/
+				$(".ejemplo").toggleClass("linkcursos");
+			}
+
+
+	</script>
+</head>
+<body>
+	<div id="contenidoEnlaze">
+		<a href="http://www.youtube.com/watch?v=oivLtfCSKRc&list=PLU8oAlHdN5BmpobVmj1IlneKlVLJ84TID&t=263s&index=36" target="_black" class="cursos">
+			Curso1
+		</a><br>
+		<a href="http://www.presearch.org/?utm_source=extcr" target="_black" class="cursos">
+			Curso5
+		</a><br>
+		<a href="" target="_black" class="cursos">
+			Curso4
+		</a><br>
+		<a href="" target="_black" class="ejemplo">
+			Curso3
+		</a><br>
+		<a href="" target="_black" class="ejemplo">
+			Curso2
+		</a><br>
+	</div>
+	<table width="100%" border="1">
+		<tr>
+			<!--<td>Curosos destacados<input type="button" id="cursos" value="cursos"></td>
+			<td>Curosos destacados<input type="button" id="informacion" value="informacion"></td>-->
+			<!--<td>Curosos destacados<input type="checkbox" id="cursos" value="cursos"></td>
+			<td>Curosos destacados<input type="checkbox" id="informacion" value="informacion"></td>-->
+			<td>Curosos destacados<input type="radio" name="misbotones" id="cursos" value="cursos"></td>
+			<td>Curosos destacados<input type="radio" name="misbotones" id="informacion" value="informacion"></td>
+		</tr>
+	</table>
+</body>
+</html>

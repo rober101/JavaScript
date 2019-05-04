@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leyendo</title>
+	<style type="text/css">
+		#primerparrafo{
+			background-color: #F00;
+		}
+
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			// body...
+			/*var colorfondo=$("#primerparrafo").css("background-color");	
+			alert(colorfondo);*/
+			//colorfondo=$("#primerparrafo").css("background-color","#00F");
+			colorfondo=$("p.destacado").css("border","5px dotted blue");
+		});
+	</script>
+</head>
+<body>
+	<p id="primerparrafo">Primer parrafo</p>
+	<p class="destacado">Primer Desatacado</p>
+	<P>Parrafo</P>
+</body>
+</html>
