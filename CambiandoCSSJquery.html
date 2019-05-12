@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leyendo</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+            document.getElementById("img1").addEventListener("mouseover",cambion,false);
+            document.getElementById("img1").addEventListener("mouseout",restaurar,false);
+        });
+    function cambion()
+    {
+
+        $("img").attr("src","imagens/gracias.jpg");
+    }
+    function restaurar()
+    {
+
+        $("img").attr("src","imagens/Captura.jpg");
+    }
+        
+	</script>
+</head>
+    <body>
+        <img src="imagens/Captura.jpg" id="img1"/>
+    </body>
+</html>
