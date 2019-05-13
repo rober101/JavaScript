@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            img{
+                margin: 0 20px;
+            }
+            #Contenedor{
+                width: 75%;
+                margin:auto;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script >
+            $(document).ready(function(){
+                document.getElementById("miboton").addEventListener("click",cambiar,false);
+            });
+            function cambiar ()
+            {
+                //$("img").fadeOut(1000).fadeIn(1000).width(300);
+                $("img").each(function(){
+                    $(this).fadeOut(1000).fadeIn(1000).width(300);
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <div id="Contenedor">
+            <img src="imagens/Captura.JPG">
+            <img src="imagens/gracias.JPG">
+            <img src="imagens/ejemplo1.JPG">
+            <img src="imagens/RE.JPG">
+        </div>
+        <div>
+            <input type="button" id="miboton" value="Accion">
+        </div>
+    </body>
+</html>
