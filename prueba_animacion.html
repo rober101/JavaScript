@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style>
+
+img{
+	opacity:0.5;
+}
+
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function() {
+	/*$("#imagen").click(function (){
+		$(this).animate(
+			{
+				marginLeft:"+=200px"
+			},100
+		);
+	});*/
+	$("img").mouseover(function(){
+		$(this).animate({
+
+			opacity:1
+		},250);
+	});
+
+});
+
+
+</script>
+</head>
+
+<body>
+<img src="imagens/Captura.JPG" width="300" height="200" id="imagen">
+
+</body>
+</html>
